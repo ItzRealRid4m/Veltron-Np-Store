@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veltron Np Online STORE</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080914;--card:#111326;--purple:#9b5cff;--cyan:#00e5ff}
+body{background:var(--bg);color:white;font-family:Arial,sans-serif}
+header{padding:22px 7%;display:flex;justify-content:space-between;
+align-items:center;border-bottom:1px solid #29213f;flex-wrap:wrap;gap:15px}
+.logo{font-size:22px;font-weight:900;color:var(--cyan)}
+nav a{color:#ccc;text-decoration:none;margin-left:20px;font-size:14px}
+nav a:hover{color:var(--cyan)}
+.hero{text-align:center;padding:100px 20px 85px;
+background:radial-gradient(ellipse at center,#34205d 0%,#111126 40%,#080914 75%)}
+.hero h1{font-size:clamp(36px,7vw,68px);font-weight:900}
+.hero h1 span{color:var(--cyan)}
+.hero p{color:#bbb;margin:20px auto;max-width:550px;line-height:1.7}
+.btn{display:inline-block;padding:14px 25px;background:linear-gradient(90deg,#853eff,#00cde8);
+color:white;text-decoration:none;border:0;border-radius:8px;font-weight:bold;cursor:pointer}
+.btn:hover{filter:brightness(1.2);transform:translateY(-2px)}
+section{padding:65px 7%}
+.heading{text-align:center;font-size:30px;margin-bottom:35px}
+.heading span{color:var(--cyan)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:var(--card);padding:27px;border:1px solid #292744;
+border-radius:14px;text-align:center;transition:.25s}
+.card:hover{border-color:var(--cyan);transform:translateY(-5px)}
+.card .emoji{font-size:48px;margin-bottom:17px}
+.card h3{font-size:21px;margin-bottom:12px}
+.card p{color:#aaa;line-height:1.6;margin-bottom:18px;font-size:14px}
+.price{font-size:27px;font-weight:900;color:var(--cyan);margin:17px}
+.server{background:linear-gradient(120deg,#17122e,#101e32);
+border:1px solid #3e3670;border-radius:15px;padding:35px;text-align:center}
+.ip{font-size:clamp(17px,4vw,26px);color:var(--cyan);margin:20px 0;overflow-wrap:anywhere}
+#contact{text-align:center}
+#contact p{color:#aaa;margin:14px}
+footer{text-align:center;padding:25px;color:#777;border-top:1px solid #29213f}
+@media(max-width:600px){nav a{margin:0 7px}.hero{padding:70px 15px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">⚡ VELTRON NP</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#store">Store</a>
+    <a href="#server">Server</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <h1>VELTRON NP<br><span>ONLINE STORE</span></h1>
+  <p>Welcome to Veltron NP! Upgrade your Minecraft adventure
+  with exclusive ranks, coins and awesome in-game rewards.</p>
+  <a class="btn" href="#store">EXPLORE STORE →</a>
+</section>
+
+<section id="store">
+  <h2 class="heading">OUR <span>STORE</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="emoji">👑</div>
+      <h3>VIP RANK</h3>
+      <p>Exclusive VIP perks and special privileges.</p>
+      <div class="price">Rs. 199</div>
+      <a class="btn" href="#contact">BUY NOW</a>
+    </div>
+    <div class="card">
+      <div class="emoji">💎</div>
+      <h3>DIAMOND RANK</h3>
+      <p>Get upgraded perks and stand out on the server.</p>
+      <div class="price">Rs. 399</div>
+      <a class="btn" href="#contact">BUY NOW</a>
+    </div>
+    <div class="card">
+      <div class="emoji">🔥</div>
+      <h3>LEGEND RANK</h3>
+      <p>Become a legend with exclusive server rewards.</p>
+      <div class="price">Rs. 699</div>
+      <a class="btn" href="#contact">BUY NOW</a>
+    </div>
+    <div class="card">
+      <div class="emoji">🪙</div>
+      <h3>1000 COINS</h3>
+      <p>Get coins to spend on exciting server items.</p>
+      <div class="price">Rs. 99</div>
+      <a class="btn" href="#contact">BUY NOW</a>
+    </div>
+    <div class="card">
+      <div class="emoji">⚔️</div>
+      <h3>PVP KIT</h3>
+      <p>Gear up and get ready for epic battles.</p>
+      <div class="price">Rs. 149</div>
+      <a class="btn" href="#contact">BUY NOW</a>
+    </div>
+    <div class="card">
+      <div class="emoji">✨</div>
+      <h3> CUSTOM ITEM</h3>
+      <p>Ask us about special in-game items.</p>
+      <div class="price">Custom</div>
+      <a class="btn" href="#contact">CONTACT US</a>
+    </div>
+  </div>
+</section>
+
+<section id="server">
+  <h2 class="heading">JOIN OUR <span>SERVER</span></h2>
+  <div class="server">
+    <h2>🎮 VELTRON NP MINECRAFT</h2>
+    <p style="color:#aaa;margin-top:15px">Join our community and start playing!</p>
+    <div class="ip" id="serverIP">YOUR-SERVER-IP-HERE</div>
+    <button class="btn" onclick="copyIP()">📋 COPY SERVER IP</button>
+    <p id="copyMessage" style="color:#00e5ff;margin-top:12px"></p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="heading">NEED <span>HELP?</span></h2>
+  <p>Want to purchase a rank or item? Contact our store team.</p>
+  <a class="btn" id="discordLink" href="https://discord.com/"
+     target="_blank" rel="noopener">JOIN DISCORD</a>
+</section>
+</main>
+
+<footer>
+  © 2026 Veltron Np Online STORE. All rights reserved.
+  <p style="margin-top:8px">Not affiliated with Mojang or Microsoft.</p>
+</footer>
+
+<script>
+// CHANGE THESE TO YOUR REAL SERVER DETAILS
+const SERVER_IP = "YOUR-SERVER-IP-HERE";
+document.getElementById("serverIP").textContent = SERVER_IP;
+
+function copyIP(){
+  navigator.clipboard.writeText(SERVER_IP).then(()=>{
+    document.getElementById("copyMessage").textContent =
+      "Server IP copied!";
+  }).catch(()=>{
+    document.getElementById("copyMessage").textContent =
+      "Please copy: " + SERVER_IP;
+  });
+}
+</script>
+</body>
+</html>
