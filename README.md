@@ -1,2 +1,2 @@
 # Veltron-Np-Store
-SERVER SHOP 
+Nepali Server created by ItzRealRid4m
